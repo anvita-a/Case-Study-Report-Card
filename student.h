@@ -15,12 +15,14 @@ struct Student {
     float exam1_tot, exam2_tot, exam3_tot;
     float sub1_tot, sub2_tot, sub3_tot;
     float total;
-    char exam1_grade, exam2_grade, exam3_grade;
+    char exam1_grade, exam2_grade, exam3_grade, tot_grade;
     char sub1_grade, sub2_grade, sub3_grade;
 };
 
-int Entry();
 void displayStudentDetails(struct Student *student);
+int Entry(struct Student **students, int *n);
 int searchAndDisplayStudent();
+int insertStudent(struct Student **students, int *n);
+int deleteStudent(struct Student **students, int *n);
 
 #endif /* STUDENT_H */
